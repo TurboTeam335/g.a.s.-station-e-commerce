@@ -13,7 +13,7 @@ class User {
     }
 
 
-    public function createUser($userID, $username, $email, $password, $location) {
+    public function createUser($user_id, $username, $email, $password, $location) {
         try {
         // Required fields validation
         if (empty($username) || empty($email) || empty($password) || empty($location)) {
@@ -40,7 +40,7 @@ class User {
 
       // create a new user document
         $user = [
-            'userID' => $userID,  // your custom unique ID
+            'user_id' => $user_id,  // your custom unique ID
             'username' => $username,
             'email' => $email,
             'password' => $hashedPassword,

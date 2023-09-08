@@ -1,7 +1,7 @@
 <?php
 
-require_once '../models/orderModel.php';
-require_once '../models/orderItemModel.php';
+require_once '../models/Order.php';
+require_once '../models/OrderItem.php';
 
 class OrderController {
     private $orderModel;
