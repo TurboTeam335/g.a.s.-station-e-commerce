@@ -62,7 +62,7 @@ class ProductModel {
   }
 
   async createProduct(data) {
-    if (!data.user_id || !data.type || !data.subcategory || !data.name || !data.description || data.price === undefined) {
+    if (!data.user_id || !data.type || !data.Brand || !data.Model || !data.ListingTitle || !data.description || data.price === undefined || !data.Condition) {
       return {
         success: false,
         message: 'All fields are required',
