@@ -2,12 +2,21 @@ const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema(
   {
-    user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    type: String,
-    subcategory: String,
-    name: String,
-    description: String,
-    price: Number,
+    user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    type: { type: String, required: true },
+    subcategory: String,  
+    Brand: { type: String, required: true },
+    Model: { type: String, required: true },
+    ListingTitle: { type: String, required: true },
+    description: { type: String, required: true, maxlength: 500 }, 
+    price: { type: Number, required: true },
+    Photo: {
+      url: String,
+      fileSize: Number,
+      fileType: String,
+    },  
+    Condition: { type: String, enum: ['Brand New', 'Mint', 'Excellent', 'Very Good', 'Good', 'Fair', 'Poor', 'Not Functioning'], required: true },
+    SKU: String 
   },
   { timestamps: true }
 );
