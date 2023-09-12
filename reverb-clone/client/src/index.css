@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+:root {
+  --white: #f5f5f7;
+  --black: #1d1d1f;
+  --orange: #eb915e;
+  --grey: #485054;
+  --secondOrange: #e87f4f;
+  --teal: #b6e0de;
+  --box-shadow: rgba(0,0,0, 0.05) 0 54px 55px,
+  rgba(0,0,0, 0.05) 0 -12px 30px,
+  rgba(0,0,0, 0.05) 0 4px 6px,
+  rgba(0,0,0, 0.05) 0 12px 3px,
+  rgba(0,0,0, 0.05) 0 -3px 5px;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hover-btn{
+  --h: 1.2em;
+  line-height: var(--h);
+  color: transparent;
+  text-shadow:
+    0 calc(-1 * var(--_t, 0em)) var(--orange),
+    0 calc(var(--h) - var(--_t, 0em)) var(--teal);
+  overflow: hidden;
+  transition: 0.3s;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.hover-btn:hover {
+  --_t: var(--h);
+}

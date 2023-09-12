@@ -1,0 +1,9 @@
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item i.fa {
+  margin: 0;
+}

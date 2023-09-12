@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--grey);
+  padding: 6px 0;
+}
+
+.nav-item {
+  margin-right: -25px; 
+  margin-left: -25px;  
+}
+
+.separator {
+  margin: 0 -125px;
+  height: 30px;  /* set the height */
+  line-height: 30px;  /* set the line-height */
+  vertical-align: middle;  /* centers the text vertically */
+  color: var(--orange);
+  display: inline-block;  /* make it inline-block so vertical-align works */
+}
+
+.nav-item i.fa-heart-o,
+.nav-item i.fa-shopping-cart {
+  color: var(--orange);
+}
