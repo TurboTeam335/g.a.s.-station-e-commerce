@@ -1,59 +1,89 @@
-.search-bar {
+:root {
+  --input-width: 425px;
+  --input-font-size: 15px;
+  --button-height: 38.5px;
+  --box-shadow-style: var(--box-shadow);
+}
+
+/* Common styles for search bars */
+.search-bar, .mobile-search-bar-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.search-bar input {
-  width: 425px;
-  height: auto; /* Explicitly set the height */
+.search-bar input, .mobile-search-bar-overlay input {
+  width: var(--input-width);
+  height: auto;
   background-color: var(--white);
   border: 1px solid var(--grey);
-  font-size: 15px;
+  font-size: var(--input-font-size);
   padding: 10px;
-  border-radius: 5px 0px 0px 5px;
-  box-shadow: var(--box-shadow);
-  outline: none; 
+  border-radius: 5px;
+  box-shadow: var(--box-shadow-style);
+  outline: none;
   &:focus {
     box-shadow: 0 0 5px var(--secondOrange);
   }
 }
 
-.search-bar button {
-  height: 38.5px; 
-  background-color: black;
-  color: var(--white);
+.search-bar button, .mobile-search-bar-overlay button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: var(--black);
   border: none;
   cursor: pointer;
-  border-radius: 0px 5px 5px 0px;
-  box-shadow: var(--box-shadow);
-  &:hover {
-    box-shadow: 0 0 5px var(--secondOrange);
-  }
+  border-radius: 0 5px 5px 0;
 }
 
-.search-bar button i.fa {
+.search-bar button i.fa, .mobile-search-bar-overlay button i.fa {
   padding: 10px;
 }
 
-.search-bar .clear {
+.search-bar .clear, .mobile-search-bar-overlay .clear {
   position: absolute;
-  right: 11%;  
-  top: 50%; 
+  right: 12%;
+  top: 50%;
   transform: translateY(-50%);
-  background-color: var(--white);
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1;
-  font-size: 15px;  
+  z-index: 2;
+  font-size: 15px;
   color: var(--black);
   padding: 0;
   border: 0;
   outline: none;
   box-shadow: none;
-  &:hover{
+  &:hover {
     box-shadow: none;
   }
+}
+
+/* Unique styles */
+
+.search-bar .clear {
+  right: 11%;
+}
+
+.mobile-search-bar-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 10;
+  margin: 2px 0 0 10px;
+  z-index: 1000;
+}
+
+.mobile-search-bar-overlay input {
+  width: 350px;
+  font-size: 12px;
+}
+
+.mobile-search-bar-overlay .clear {
+  right: 12%;
 }

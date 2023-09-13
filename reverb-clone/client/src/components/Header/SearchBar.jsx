@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import './SearchBar.css';
 
 const SearchBar = () => {
-  const [inputValue, setInputValue] = useState(''); // 1
+  const [inputValue, setInputValue] = useState('');
 
   const handleClear = () => {
-    // 3
     setInputValue('');
   };
 
@@ -19,7 +18,7 @@ const SearchBar = () => {
       />
       {inputValue && (
         <button className='clear' onClick={handleClear}>
-          X
+          𝗫 
         </button>
       )}
       <button type='submit'>
