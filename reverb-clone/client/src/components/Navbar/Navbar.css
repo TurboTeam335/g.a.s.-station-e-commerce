@@ -1,14 +1,22 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;  /* Make sure it overlays other items when scrolling */
+   /* Add a background color to ensure text readability */
+}
+
+
 .navbar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--grey);
+  background-color: tr;
   padding: 6px 0;
 }
 
 .nav-item {
-  margin-right: -25px; 
-  margin-left: -25px;
+  margin-right: 10px; 
+  margin-left: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -32,9 +40,9 @@
 @media (max-width: 860px) {
   .navbar {
     flex-direction: column;
-    align-items: start;
-    margin-bottom: 200px;
-    background-color: var(--white);
+    align-items: flex-start;
+    margin-bottom: 150px;
+    background-color: transparent;
   }
   .separator {
     display: none;
@@ -44,5 +52,7 @@
   }
   .nav-item i {
     margin-right: 8px;
+    display: none;
   }
 }
+

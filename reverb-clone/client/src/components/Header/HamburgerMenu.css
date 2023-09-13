@@ -4,13 +4,14 @@
   align-items: center;
   justify-content: space-evenly;
   position: fixed;
-  top: 100px;  /* Changed from 0 to 60px to make it start at the bottom of the header */
+  top: 100px;  
   right: -400px;
-  width: 175px;
-  height: calc(100% - 60px);  /* Adjusted to fit remaining height */
-  background-color: var(--white);
+  width: 150px;
+  height: calc(100% - 60px);  
+  background-color: var(--grey);
   overflow-y: auto;
   transition: right 0.3s ease;
+  z-index: 1000;
 }
 
 
@@ -23,15 +24,15 @@
 }
 
 .user-links-container {
-  margin-top: -125px;  /* You can adjust this value as needed */
+  margin-top: -125px;  
 }
 
 .sidebar.open {
-  right: 0; /* Ending position when opened */
+  right: 0; 
 }
 
 .sidebar.closed {
-  right: -400px; /* Ending position when closed */
+  right: -400px; 
 }
 
 .hamburger-button {

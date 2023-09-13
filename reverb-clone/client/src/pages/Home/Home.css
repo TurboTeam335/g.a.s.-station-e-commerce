@@ -1,0 +1,105 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.main-section {
+  position: relative;
+  text-align: center;
+}
+
+.main-section img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 5px var(--orange) solid;
+  box-shadow: var(--box-shadow);
+}
+
+.circle-container {
+  position: absolute; 
+  bottom: -228px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%; 
+  z-index: 10; 
+}
+
+.circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: transparent;
+}
+
+.circle-item:hover {
+  transform: translateY(-10px);
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 5px var(--orange) solid;
+  box-shadow: var(--box-shadow);
+}
+
+.circle-item p {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.guitar {
+  background-position: 30% 85%;
+}
+
+.amplifier {
+  background-position: 75% 85%;
+}
+
+.pedal {
+  background-position: 40% 85%;
+}
+
+/* ...existing CSS... */
+
+/* Mobile Responsive CSS */
+@media (max-width: 912px) {
+  .main-section img {
+    width: 90%; /* Reducing width for some side spacing */
+  }
+
+  .circle-container {
+    position: static; /* Resets the position to 'static' so it flows like a normal block */
+    bottom: auto; /* Resets to default */
+    left: auto; /* Resets to default */
+    transform: none; /* Resets to default */
+    flex-direction: column; /* Stack the circle items */
+    align-items: center; /* Center align the items */
+    margin-top: 20px; /* Adds some top margin for spacing */
+  }
+
+  .circle-item {
+    margin-bottom: 20px; /* Space between stacked items */
+  }
+}
+
+@media (max-width: 600px) {
+.circle {
+  width: 100px;  /* Reduced size */
+  height: 100px;  /* Reduced size */
+  border: 4px var(--orange) solid;  /* Optional: You can also reduce the border */
+}
+}

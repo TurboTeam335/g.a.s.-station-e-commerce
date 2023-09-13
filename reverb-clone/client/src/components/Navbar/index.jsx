@@ -7,9 +7,9 @@ const Separator = () => <span className="separator">|</span>;
 const Navbar = () => {
   return (
     <div className="navbar">
-      <NavItem label="Guitars" />
+      <NavItem label="Guitars"/>
       <Separator />
-      <NavItem label="Amps" />
+      <NavItem label="Amplifiers" />
       <Separator />
       <NavItem label="Pedals" />
       <Separator />
@@ -21,3 +21,4 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
