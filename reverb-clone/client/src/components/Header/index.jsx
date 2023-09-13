@@ -4,8 +4,8 @@ import './Header.css';
 import SearchBar from './SearchBar';
 import UserLinks from './UserLinks';
 import Navbar from '../Navbar';
+import HamburgerMenu from './HamburgerMenu'; 
 import logo from '../../img/logo.png';
-
 
 const Header = () => {
   const [isMobile, setMobile] = useState(window.innerWidth <= 860);
@@ -30,7 +30,6 @@ const Header = () => {
         {isMobile ? (
           <>
             <div className='left-mobile-icons'>
-              <i className='fas fa-bars'></i>
               <i className='fas fa-search' onClick={toggleSearch}></i>
             </div>
             <div className='logo'>
@@ -39,8 +38,7 @@ const Header = () => {
               </Link>
             </div>
             <div className='right-mobile-icons'>
-              <i className='far fa-heart'></i>
-              <i className='fas fa-shopping-cart'></i>
+            <HamburgerMenu />
             </div>
             {showSearch && (
               <div className='mobile-search-bar-overlay'>

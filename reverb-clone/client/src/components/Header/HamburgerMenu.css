@@ -1,0 +1,42 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  top: 100px;  /* Changed from 0 to 60px to make it start at the bottom of the header */
+  right: -400px;
+  width: 175px;
+  height: calc(100% - 60px);  /* Adjusted to fit remaining height */
+  background-color: var(--white);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+}
+
+
+/* Inside Navbar.css */
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.user-links-container {
+  margin-top: -125px;  /* You can adjust this value as needed */
+}
+
+.sidebar.open {
+  right: 0; /* Ending position when opened */
+}
+
+.sidebar.closed {
+  right: -400px; /* Ending position when closed */
+}
+
+.hamburger-button {
+  color: var(--orange);
+  background-color: transparent;
+  border: none;
+  font-size: x-large;
+}

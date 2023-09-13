@@ -8,19 +8,41 @@
 
 .nav-item {
   margin-right: -25px; 
-  margin-left: -25px;  
+  margin-left: -25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .separator {
   margin: 0 -125px;
-  height: 30px;  /* set the height */
-  line-height: 30px;  /* set the line-height */
-  vertical-align: middle;  /* centers the text vertically */
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
   color: var(--orange);
-  display: inline-block;  /* make it inline-block so vertical-align works */
+  display: inline-block;
 }
 
 .nav-item i.fa-heart-o,
 .nav-item i.fa-shopping-cart {
   color: var(--orange);
+  margin-right: 10px;
+}
+
+@media (max-width: 860px) {
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 200px;
+    background-color: var(--white);
+  }
+  .separator {
+    display: none;
+  }
+  .nav-item {
+    margin-bottom: 20px;
+  }
+  .nav-item i {
+    margin-right: 8px;
+  }
 }

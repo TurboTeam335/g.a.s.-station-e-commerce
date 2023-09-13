@@ -13,7 +13,7 @@ const Navbar = () => {
       <Separator />
       <NavItem label="Pedals" />
       <Separator />
-      <NavItem label="Wishlist" icon="fa-heart-o" /> 
+      <NavItem label="Wishlist" icon="fa-heart-o" />
       <Separator />
       <NavItem label="Cart" icon="fa-shopping-cart" />
     </div>
