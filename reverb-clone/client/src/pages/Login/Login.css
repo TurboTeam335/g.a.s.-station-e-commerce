@@ -1,0 +1,105 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+
+}
+
+.login-box {
+  height: 250px;  /* Adjust as needed */
+}
+
+.login-box,
+.signup-box {
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 48%;
+  box-shadow: var(--box-shadow);
+  margin: 40px 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.register-box__input--text,
+.register-box__input--password,
+.register-box__input--email {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  &:focus {
+    box-shadow: 0 0 5px var(--secondOrange);
+  }
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
+button {
+  padding: 10px;
+  margin: 10px auto; /* Center the button */
+  display: block; /* Required for centering with auto margin */
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  border: solid 1px var(--orange);
+  box-shadow: var(--box-shadow);
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+
+@media (max-width: 912px) {
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 20px 0 ;
+  }
+
+  .login-box,
+.signup-box {
+  width: 85%;
+  margin: 20px ;
+}
+
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 20px;
+  }
+}

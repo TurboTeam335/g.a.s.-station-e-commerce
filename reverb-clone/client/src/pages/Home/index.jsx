@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import tele from '../../img/telecaster2.png';
+import tele from '../../img/telecaster2_high_res.png';
 import gibson from '../../img/335.png';
 import strymon from '../../img/strymon.png';
 import supro from '../../img/supro.png';

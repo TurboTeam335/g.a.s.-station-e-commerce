@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const Product = require('./Product');
-const Order = require('./Order');
-const OrderItem = require('./OrderItem');
 
 const userSchema = new mongoose.Schema(
   {
     username: { type: String, unique: true },
-    email: { type: String, unique: true },
+    email: {
+      type: String,
+      unique: true,
+      match: [/.+@.+\..+/, 'Must use a valid email address'],
+    },
     password: String,
-    location: String,
   },
   { timestamps: true }
 );
@@ -20,15 +20,15 @@ userSchema.index({ username: 1 });
 const User = mongoose.model('User', userSchema);
 
 class UserModel {
-  async createUser(user_id, username, email, password, location) {
+  async createUser(user_id, username, email, password) {
     try {
-      if (!username || !email || !password || !location) {
+      if (!username || !email || !password) {
         return 'All fields are required';
       }
 
-      if (typeof location !== 'string') {
-        return 'Invalid data type for location';
-      }
+      // if (typeof location !== 'string') {
+      //   return 'Invalid data type for location';
+      // }
 
       if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
         return 'Invalid email format';
@@ -47,7 +47,6 @@ class UserModel {
         username,
         email,
         password: hashedPassword,
-        location,
       });
 
       const result = await user.save();
@@ -92,7 +91,7 @@ class UserModel {
       const orders = await Order.find({ user_id: id });
       const orderIds = orders.map(order => order._id);
       const orderItems = await OrderItem.find({ order_id: { $in: orderIds } });
-      
+
       if (user) {
         return {
           success: true,

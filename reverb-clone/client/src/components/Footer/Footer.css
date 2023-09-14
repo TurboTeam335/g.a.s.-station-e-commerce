@@ -25,10 +25,22 @@
   justify-content: end;
   align-items: center;
   color: var(--orange);
+  font-size: 14px;
 }
 
 .portfolio-link {
   margin-left: 10px;
   text-decoration: none;
   color: inherit;
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .copyright-portfolio {
+    font-size: 10px;
+    justify-content: space-between;
+  }
 }
