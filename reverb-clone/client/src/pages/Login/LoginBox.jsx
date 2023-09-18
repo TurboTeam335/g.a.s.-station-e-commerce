@@ -45,7 +45,8 @@ const LoginBox = ({
           {showLoginPassword ? <IoMdEyeOff /> : <IoMdEye />}
         </span>
       </div>
-      <button onClick={handleLoginClick}>Sign In</button>
+      <button className="login-btn" onClick={handleLoginClick}>LogIn</button>
+
     </div>
   );
 };

@@ -16,6 +16,13 @@
 
 * {
   font-family: 'Roboto', sans-serif;
+
+}
+
+.App {  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
 }
 
 body {
@@ -23,6 +30,13 @@ body {
   padding: 0;
   background-color: var(--white);
 }
+
+html, body {
+  height: 100%;
+  margin: 0; /* ensure no margin */
+  padding: 0; /* ensure no padding */
+}
+
 
 .hover-btn {
   --h: 1.2em;

@@ -2,7 +2,6 @@
   background-color: var(--grey);
   padding: 20px;
   text-align: center;
-  
 }
 
 .footer-links {
@@ -13,11 +12,21 @@
   align-items: center;
 }
 
-
 .footer-link {
-  margin: 0 15px;
+  --h: 1.2em;
+  line-height: var(--h);
+  color: transparent;
+  text-shadow: 0 calc(-1 * var(--_t, 0em)) var(--orange),
+    0 calc(var(--h) - var(--_t, 0em)) var(--teal);
+  overflow: hidden;
+  transition: 0.3s;
+  font-size: 18px;
   text-decoration: none;
-  color: inherit;
+  margin-right: 15px;
+}
+
+.footer-link:hover {
+  --_t: var(--h);
 }
 
 .copyright-portfolio {

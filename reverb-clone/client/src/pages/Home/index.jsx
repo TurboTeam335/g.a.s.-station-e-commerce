@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom'; // Import the Link component
 import tele from '../../img/telecaster2_high_res.png';
 import gibson from '../../img/335.png';
 import strymon from '../../img/strymon.png';
@@ -13,30 +14,30 @@ const Home = () => {
       </div>
       <div className='circle-container'>
         <div className='circle-item'>
-          <a href='/guitars'>
+          <Link to='/guitars'>  {/* Use Link instead of a */}
             <div
               className='circle guitar'
               style={{ backgroundImage: `url(${gibson})` }}
             ></div>
-          </a>
+          </Link>
           <p>Guitars</p>
         </div>
         <div className='circle-item'>
-          <a href='/amplifiers'>
+          <Link to='/amplifiers'>  {/* Use Link instead of a */}
             <div
               className='circle amplifier'
               style={{ backgroundImage: `url(${supro})` }}
             ></div>
-          </a>
+          </Link>
           <p>Amplifiers</p>
         </div>
         <div className='circle-item'>
-          <a href='/pedals'>
+          <Link to='/pedals'>  {/* Use Link instead of a */}
             <div
               className='circle pedal'
               style={{ backgroundImage: `url(${strymon})` }}
             ></div>
-          </a>
+          </Link>
           <p>Pedals</p>
         </div>
       </div>

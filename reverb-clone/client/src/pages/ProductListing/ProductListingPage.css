@@ -1,0 +1,41 @@
+body, h1, hr, div {
+  margin: 0;
+  padding: 0;
+  border: 0; 
+}
+
+.product-title {
+  background-color: #22224f;;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+h1 {
+  font-weight: 300;
+  color: var(--orange);
+}
+
+.divider {
+  border-bottom: 1px solid var(--teal);
+  width: 40%;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid lightgray;  
+  margin: 20px 5%;  
+border-radius: 4px;
+}
+
+
+.box-divider {
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  box-sizing: border-box; 
+  padding: 5px 0 0;
+}

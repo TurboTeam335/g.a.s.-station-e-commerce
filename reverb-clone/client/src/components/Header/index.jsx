@@ -33,7 +33,7 @@ const Header = () => {
               <i className='fas fa-search' onClick={toggleSearch}></i>
             </div>
             <div className='logo'>
-              <Link to='/home'>
+              <Link to='/'>
                 <img src={logo} alt='logo' />
               </Link>
             </div>
@@ -49,7 +49,7 @@ const Header = () => {
         ) : (
           <>
             <div className='logo'>
-              <Link to='/home'>
+              <Link to='/'>
                 <img src={logo} alt='logo' />
               </Link>
             </div>

@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import './NavItem.css';
 
-const NavItem = ({ label, icon }) => {
+const NavItem = ({ label, icon, to }) => {
   return (
     <div className="nav-item">
       {icon && <i className={`fa ${icon}`}></i>}
-      <a className="hover-btn" href="#">{label}</a>
+      <Link className="hover-btn" to={to}>{label}</Link>
     </div>
   );
 }

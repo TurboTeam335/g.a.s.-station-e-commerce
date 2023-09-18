@@ -1,14 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import './Footer.css';
-import NavItem from '../Navbar/NavItem';
 
 const Footer = () => {
   return (
     <div className='footer'>
       <div className='footer-links'>
-        <NavItem label='Guitars' />
-        <NavItem label='Amplifiers' />
-        <NavItem label='Pedals' />
+        <Link to='/guitars' className='footer-link'>
+          Guitars
+        </Link>
+        <Link to='/amplifiers' className='footer-link'>
+          Amplifiers
+        </Link>
+        <Link to='/pedals' className='footer-link'>
+          Pedals
+        </Link>
       </div>
       <div className='copyright-portfolio'>
         <span>© All rights reserved 2023</span>

@@ -11,11 +11,11 @@ const Separator = () => <span className="separator">|</span>;
 const Navbar = () => {
   return (
     <div className="navbar">
-      <NavItem label="Guitars" />
+     <NavItem label="Guitars" to="/guitars" />
       <Separator />
-      <NavItem label="Amplifiers" />
+      <NavItem label="Amplifiers" to="/amplifiers" />
       <Separator />
-      <NavItem label="Pedals" />
+      <NavItem label="Pedals" to="/pedals" />
       <Separator />
       <NavItem label="Sell" />
       <Separator />
