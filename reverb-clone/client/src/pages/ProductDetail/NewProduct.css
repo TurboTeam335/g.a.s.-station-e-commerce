@@ -1,0 +1,29 @@
+.new-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 70%;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.new-image-wrapper {
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.new-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

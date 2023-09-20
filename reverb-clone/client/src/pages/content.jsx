@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home/index';
 import ProductListingPage from './ProductListing/ProductListingPage';
+import ProductDetail from './ProductDetail/ProductDetail';
 // ... other imports
 import Login from '../pages/Login/index';
 
@@ -21,6 +22,8 @@ const Content = () => {
           path='/pedals'
           element={<ProductListingPage category='PEDALS' />}
         />
+        <Route path='/products/:sku' element={<ProductDetail />} />{' '}
+        {/* Added this line */}
         <Route path='/login' element={<Login />} /> {/* Added this line */}
         {/* Add any other routes as needed */}
       </Routes>
@@ -29,4 +32,3 @@ const Content = () => {
 };
 
 export default Content;
-

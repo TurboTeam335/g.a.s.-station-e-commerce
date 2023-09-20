@@ -5,6 +5,7 @@ import gretsch from './img/gretschCard.png';
 import prs from './img/prsCard.jpeg';
 import ibanez from './img/RG550Card.jpeg';
 import taylor from './img/taylorCard.png';
+import noImg from './img/noGuitar.jpeg';
 
 const fakeGuitars = [
   {
@@ -16,6 +17,7 @@ const fakeGuitars = [
     ListingTitle: "Fender American Deluxe Stratocaster",
     description: "A classic sunburst finish Fender Stratocaster with a smooth tone.",
     price: 1200,
+    year: 2018,
     Photo: {
       url: stratCard,
       fileSize: 2000,
@@ -33,6 +35,7 @@ const fakeGuitars = [
     ListingTitle: "Martin D-28 Natural",
     description: "The legendary Martin D-28 delivers a deep and rich tone.",
     price: 2500,
+    year: 1992,
     Photo: {
       url: d28Card,
       fileSize: 2500,
@@ -50,6 +53,7 @@ const fakeGuitars = [
     ListingTitle: "Gibson ES-335 Cherry Red",
     description: "Iconic cherry red finish with a mellow, vintage tone.",
     price: 2800,
+    year: 1969,
     Photo: {
       url: es335,
       fileSize: 2100,
@@ -101,6 +105,7 @@ const fakeGuitars = [
     ListingTitle: "Ibanez RG550 Neon Yellow",
     description: "Bright neon finish with a fast neck for shredding.",
     price: 1100,
+    year: 2005,
     Photo: {
       url: ibanez,
       fileSize: 2200,
@@ -118,6 +123,7 @@ const fakeGuitars = [
     ListingTitle: "Gretsch G9500 Jim Dandy Flat Top",
     description: "Vintage style and sound in a compact parlor size.",
     price: 400,
+    year: 2015,
     Photo: {
       url: gretsch,
       fileSize: 2000,
@@ -125,6 +131,24 @@ const fakeGuitars = [
     },
     Condition: "Very Good",
     SKU: "GG01"
+},
+{
+  user_id: "user129",
+  type: "Electric Bass",
+  subcategory: "Bass",
+  Brand: "Music Man",
+  Model: "StingRay",
+  ListingTitle: "Music Man StingRay",
+  description: "4 string single humbucker",
+  price: 2500,
+  year: 2023,
+  Photo: {
+    // url: ,
+    fileSize: 2000,
+    fileType: "image/jpeg",
+  },
+  Condition: "Brand New",
+  SKU: "107-CMT-21-05"
 }
 
 ];

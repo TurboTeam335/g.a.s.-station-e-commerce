@@ -10,6 +10,7 @@ const productSchema = new mongoose.Schema(
     ListingTitle: { type: String, required: true },
     description: { type: String, required: true, maxlength: 500 }, 
     price: { type: Number, required: true },
+    year: { type: Number },
     Photo: {
       url: String,
       fileSize: Number,

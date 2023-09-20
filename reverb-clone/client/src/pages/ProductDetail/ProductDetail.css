@@ -1,0 +1,17 @@
+.product-detail-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 2rem 1rem;
+  padding: 10px;
+  border: 1px solid blue;
+  background-color: var(--white);
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
