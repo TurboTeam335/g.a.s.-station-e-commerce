@@ -10,9 +10,6 @@
   margin-bottom: 15px;
 }
 
-
-
-
 .product-detail-title-year-wrapper {
   display: flex;
   flex-direction: column;
@@ -51,6 +48,11 @@
 
 .btn-container {
   padding: 0 15px;
+}
+
+.btn-container a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .detail-btn {

@@ -19,9 +19,9 @@ const Navbar = () => {
       <Separator />
       <NavItem label="Sell" />
       <Separator />
-      <NavItem label="Wishlist" icon="fa-heart-o" />
+      <NavItem label="Wishlist" icon="fa-heart-o" to="/wishlist"/>
       <Separator />
-      <NavItem label="Cart" icon="fa-shopping-cart" />
+      <NavItem label="Cart" icon="fa-shopping-cart" to="/cart"/>
     </div>
   );
 }

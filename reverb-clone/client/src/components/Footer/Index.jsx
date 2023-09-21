@@ -6,6 +6,8 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='footer-links'>
+        
+        <h3>Gear</h3>
         <Link to='/guitars' className='footer-link'>
           Guitars
         </Link>
@@ -15,6 +17,16 @@ const Footer = () => {
         <Link to='/pedals' className='footer-link'>
           Pedals
         </Link>
+      </div>
+        <div className='footer-links'>
+        <h3>Information</h3>
+        <Link to='/about-us' className='footer-link'>
+          About Us
+        </Link>
+        <Link to='/contact' className='footer-link'>
+          Contact
+        </Link>
+  
       </div>
       <div className='copyright-portfolio'>
         <span>© All rights reserved 2023</span>

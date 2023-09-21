@@ -1,0 +1,32 @@
+.recently-viewed-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 95%;
+  height: auto;
+  overflow: hidden;
+  /* border: 1px solid green; */
+  border-radius: 5px;
+  margin: 15px;
+  padding: 0 5px;
+}
+
+.recently-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.product-card-storage {
+  display: flex;
+  overflow-x: auto;
+  
+}
+
+.product-card.recent {
+  width: 80%; /* adjust as needed to make the card smaller */
+  margin-right: 20px;
+}
+
+.product-card.recent:last-child {
+  margin-right: 0;
+}

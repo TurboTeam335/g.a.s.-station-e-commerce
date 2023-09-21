@@ -51,7 +51,10 @@ const fakeGuitars = [
     Brand: "Gibson",
     Model: "ES-335",
     ListingTitle: "Gibson ES-335 Cherry Red",
-    description: "Iconic cherry red finish with a mellow, vintage tone.",
+    finish: "Cherry Red",
+    handedness: "Right",
+    electronics: "H H",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     price: 2800,
     year: 1969,
     Photo: {
@@ -59,6 +62,8 @@ const fakeGuitars = [
       fileSize: 2100,
       fileType: "image/jpeg",
     },
+    weight: "8.6",
+    nutWidth: "1.664",
     Condition: "Very Good",
     SKU: "GE01"
 },

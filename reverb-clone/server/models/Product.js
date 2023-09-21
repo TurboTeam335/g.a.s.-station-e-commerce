@@ -8,6 +8,9 @@ const productSchema = new mongoose.Schema(
     Brand: { type: String, required: true },
     Model: { type: String, required: true },
     ListingTitle: { type: String, required: true },
+    finish: { type: String },
+    handedness: { type: String },
+    electronics: { type: String },
     description: { type: String, required: true, maxlength: 500 }, 
     price: { type: Number, required: true },
     year: { type: Number },
@@ -16,6 +19,8 @@ const productSchema = new mongoose.Schema(
       fileSize: Number,
       fileType: String,
     },  
+    weight: { type: Number },
+    nutWidth: { type: Number },
     Condition: { type: String, enum: ['Brand New', 'Mint', 'Excellent', 'Very Good', 'Good', 'Fair', 'Poor', 'Not Functioning'], required: true },
     SKU: String 
   },

@@ -1,5 +1,5 @@
 import React from 'react';
-import shopNow from '../../img/shopNow.png';
+import shopNow from '../../../img/shopNow.png';
 import './NewProduct.css';
 
 const NewProduct = () => (

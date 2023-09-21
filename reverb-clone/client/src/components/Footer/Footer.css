@@ -2,15 +2,21 @@
   background-color: var(--grey);
   padding: 20px;
   text-align: center;
+  display: flex; /* Add this */
+  justify-content: space-between; /* Use this to space out the Gear and Information sections */
+  flex-wrap: wrap; /* Add this to ensure wrapping on smaller screens */
 }
 
 .footer-links {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: calc(50% - 10px); /* Add this to give each section equal width. 
+                              You can adjust the value if needed. */
 }
+
 
 .footer-link {
   --h: 1.2em;
@@ -22,7 +28,7 @@
   transition: 0.3s;
   font-size: 18px;
   text-decoration: none;
-  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 .footer-link:hover {
@@ -43,9 +49,20 @@
   color: inherit;
 }
 
+h3 {
+  color: var(--orange);
+  font-weight: 300;
+  border-bottom: 1px solid var(--teal);
+}
+
 @media (max-width: 480px) {
+  .footer {
+    flex-direction: column; /* Change the direction for smaller screens */
+    align-items: center; /* Center align items on smaller screens */
+  }
+
   .footer-links {
-    flex-direction: column;
+    width: 100%; /* Set the width to 100% for smaller screens */
   }
 
   .copyright-portfolio {
@@ -53,3 +70,4 @@
     justify-content: space-between;
   }
 }
+

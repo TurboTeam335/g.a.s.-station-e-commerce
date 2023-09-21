@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import './ProductCard.css';
 import noImg from '../../data/img/noGuitar.jpeg';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, className = '' }) => {
   return (
     <Link 
       to={`/products/${product.SKU}`} 
-      className="product-card"
+      className={`product-card ${className}`}
     >
       <div className='product-image-wrapper'>
         <img

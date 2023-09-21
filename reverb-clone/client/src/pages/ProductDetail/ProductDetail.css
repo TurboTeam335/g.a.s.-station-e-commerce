@@ -1,10 +1,11 @@
 .product-detail-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
+   display: flex;
+  flex-direction: column; /* changed from row (default) to column */
+  align-items: center; /* centers its children horizontally */
+  justify-content: space-between; 
   margin: 2rem 1rem;
-  padding: 10px;
-  border: 1px solid blue;
+  padding: 10px 70px;
+ 
   background-color: var(--white);
 }
 
@@ -13,5 +14,20 @@
   flex-direction: column;
   align-items: center;
   width: 60%;
+  
 }
 
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 60%;
+
+}
+
+.horizontal-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-start;
+}
