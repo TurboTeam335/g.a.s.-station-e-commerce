@@ -6,6 +6,7 @@ import AboutUS from './AboutUs/AboutUs';
 import Login from '../pages/Login/index';
 import Wishlist from './Wishlist/Wishlist';
 import Contact from './Contact/Contact';
+import Sell from './Sell/Sell';
 
 const Content = () => {
   return (
@@ -27,9 +28,10 @@ const Content = () => {
         <Route path='/products/:sku' element={<ProductDetail />} />{' '}
         {/* Added this line */}
         <Route path='/login' element={<Login />} /> 
-        <Route path='/wishlist' element={<Wishlist category='Wishlist'/>} />
-        <Route path='/about-us' element={<AboutUS category='About-Us'/>} />
-        <Route path='/contact' element={<Contact category='Contact'/>} />
+        <Route path='/wishlist' element={<Wishlist />} />
+        <Route path='/about-us' element={<AboutUS />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/sell' element={<Sell />} />
       </Routes>
     </div>
   );

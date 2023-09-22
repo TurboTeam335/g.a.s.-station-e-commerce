@@ -1,0 +1,12 @@
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+
+}
+
+.navigation-buttons button {
+  margin-left: 5px;
+  margin-right: 5px;
+}

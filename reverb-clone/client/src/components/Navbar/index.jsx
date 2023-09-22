@@ -17,7 +17,7 @@ const Navbar = () => {
       <Separator />
       <NavItem label="Pedals" to="/pedals" />
       <Separator />
-      <NavItem label="Sell" />
+      <NavItem label="Sell" to="/sell"/>
       <Separator />
       <NavItem label="Wishlist" icon="fa-heart-o" to="/wishlist"/>
       <Separator />

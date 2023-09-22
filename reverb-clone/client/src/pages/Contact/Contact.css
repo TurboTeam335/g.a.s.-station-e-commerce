@@ -1,8 +1,9 @@
 .contact-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px;
-
+  max-width: 80%;
+  margin: 20px auto;
 }
 
 .message-section {
@@ -27,7 +28,8 @@ form {
   flex-direction: column;
 }
 
-input, textarea {
+input,
+textarea {
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ddd;
@@ -54,4 +56,21 @@ button:hover {
   color: var(--orange);
   border: solid 1px var(--orange);
   box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack child elements vertically */
+    max-width: 100%; /* Make it full width for better mobile appearance */
+    padding: 10px; /* You can adjust this value if you want */
+  }
+
+  .message-section, 
+  .form-section {
+    border-radius: 5px; /* Add a border-radius to both sections */
+    border: 1px solid #ddd; /* Add border to both */
+    margin-bottom: 10px; /* Add some space between the sections */
+  }
+
+
 }
