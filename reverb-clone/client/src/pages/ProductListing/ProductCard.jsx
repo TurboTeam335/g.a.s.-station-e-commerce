@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './ProductCard.css';
 import noImg from '../../data/img/noGuitar.jpeg';
 
-const ProductCard = ({ product, className = '' }) => {
-  return (
-    <Link 
-      to={`/products/${product.SKU}`} 
-      className={`product-card ${className}`}
-    >
+const ProductCard = ({ product, className = '', inWishlist = false, onRemove, onAddToCart }) => {
+  const navigate = useNavigate();
+
+  const cardContent = (
+    <>
       <div className='product-image-wrapper'>
         <img
           src={product.Photo.url || noImg}
@@ -27,7 +26,19 @@ const ProductCard = ({ product, className = '' }) => {
           ${product.price.toLocaleString('en-US')}
         </span>
       </div>
-    </Link>
+    </>
+  );
+
+  return (
+    <div className={`product-card ${className}`} onClick={() => navigate(`/products/${product.SKU}`)}>
+      {cardContent}
+      {inWishlist && (
+        <div className='wishlist-buttons'>
+          <button onClick={(e) => { e.stopPropagation(); onRemove(product.SKU); }} className='remove-btn'>Remove</button>
+          <button onClick={(e) => { e.stopPropagation(); onAddToCart(product); }} className='add-to-cart-btn'>Add to Cart</button>
+        </div>
+      )}
+    </div>
   );
 };
 

@@ -1,0 +1,31 @@
+/* Wishlist.css */
+/* You can start with the same styles as in ProductListingPage.css and ProductCard.css */
+/* Customize further as needed */
+
+.product-title {
+  background-color: #22224f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+h1 {
+  font-weight: 300;
+  color: var(--orange);
+}
+
+.divider {
+  border-bottom: 1px solid var(--teal);
+  width: 40%;
+}
+
+.product-listing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  padding: 10px;
+}
+
+/* ... rest of the styles (if needed) ... */

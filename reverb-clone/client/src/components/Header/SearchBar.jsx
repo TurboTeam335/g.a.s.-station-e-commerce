@@ -9,23 +9,25 @@ const SearchBar = () => {
   };
 
   return (
-    <div className='search-bar'>
+    <div className='search-bar__container'>
       <input
         type='text'
         placeholder='Search for gear'
         value={inputValue}
         onChange={e => setInputValue(e.target.value)}
+        className='search-bar__input'
       />
       {inputValue && (
-        <button className='clear' onClick={handleClear}>
+        <button className='search-bar__clear-button' onClick={handleClear}>
           𝗫 
         </button>
       )}
-      <button type='submit'>
+      <button type='submit' className='search-bar__submit-button'>
         <i className='fa fa-search'></i>
       </button>
     </div>
   );
 };
+
 
 export default SearchBar;

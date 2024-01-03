@@ -6,15 +6,15 @@
 }
 
 /* Common styles for search bars */
-.search-bar, .mobile-search-bar-overlay {
+.search-bar__container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.search-bar input, .mobile-search-bar-overlay input {
-  width: var(--input-width);
+.search-bar__input {
+  width: 425px;
   height: auto;
   background-color: var(--white);
   border: 1px solid var(--grey);
@@ -28,7 +28,7 @@
   }
 }
 
-.search-bar button, .mobile-search-bar-overlay button {
+.search-bar__submit-button {
   position: absolute;
   right: 0;
   top: 35%;
@@ -40,13 +40,13 @@
   border-radius: 0 5px 5px 0;
 }
 
-.search-bar button i.fa, .mobile-search-bar-overlay button i.fa {
+.search-bar__submit-button i.fa {
   padding: 10px;
 }
 
-.search-bar .clear, .mobile-search-bar-overlay .clear {
+.search-bar__clear-button {
   position: absolute;
-  right: 12%;
+  right: 11%;
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
@@ -63,6 +63,7 @@
     box-shadow: none;
   }
 }
+
 
 /* Unique styles */
 

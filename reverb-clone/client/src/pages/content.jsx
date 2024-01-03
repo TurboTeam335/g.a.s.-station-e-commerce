@@ -7,6 +7,7 @@ import Login from '../pages/Login/index';
 import Wishlist from './Wishlist/Wishlist';
 import Contact from './Contact/Contact';
 import Sell from './Sell/Sell';
+import Cart from './Cart/Cart';
 
 const Content = () => {
   return (
@@ -32,6 +33,7 @@ const Content = () => {
         <Route path='/about-us' element={<AboutUS />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/sell' element={<Sell />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
     </div>
   );
