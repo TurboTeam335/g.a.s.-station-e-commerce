@@ -24,6 +24,9 @@ const Wishlist = () => {
         <h1>Wishlist</h1>
         <div className="divider"></div>
       </div>
+      <div className='wishlist-container'>
+
+      
       <div className='product-listing-container'> {/* Use the same class for styling */}
         {wishlist.map((product, index) => (
             <ProductCard 
@@ -35,6 +38,7 @@ const Wishlist = () => {
             onAddToCart={handleAddToCart}
           />
         ))}
+      </div>
       </div>
     </div>
   );

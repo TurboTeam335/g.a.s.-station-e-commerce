@@ -31,7 +31,7 @@ const Footer = () => {
       <div className='copyright-portfolio'>
         <span>© All rights reserved 2023</span>
         <a
-          href='https://turboteam335.github.io/dm-portfolio/'
+          href='https://danielmascali.com'
           target='_blank'
           rel='noopener noreferrer'
           className='portfolio-link'
